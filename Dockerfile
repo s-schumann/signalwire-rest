@@ -55,7 +55,7 @@ HEALTHCHECK --interval=30s --timeout=3s \
   CMD wget -qO- http://localhost:3000/health || exit 1
 
 # Add metadata about the image
-LABEL version="1.2.0"
+LABEL version="1.2.2"
 LABEL description="Sample for a REST API that can be queried by a Signalwire inbound call and will create XML."
 LABEL maintainer="Sebastian Schumann <git@s-schumann.com>"
 
