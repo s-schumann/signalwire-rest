@@ -7,13 +7,13 @@ Module for showcasing the interaction with the Signalwire RESTful LaML API. It m
 
 To build the Docker image use the following commands (adapt with your respective tags):
 
-```bash
+```shell
 docker build --tag signalwire-rest .
 docker build -t schumann/signalwire-rest .
 ```
 
 We can push or run/stop the container with the commands below.
-```bash
+```shell
 docker push schumann/signalwire-rest:latest
 docker run --env-file .env -p 30000:3000 signalwire-rest
 docker ps
@@ -25,7 +25,7 @@ Running the container makes its exposed content available to, e.g., `http://loca
 
 To build on MacOS we should consider that a published image needs a different platform. We can use `buildx` for that:
 
-```bash
+```shell
 docker buildx create --use
 docker buildx build --platform linux/amd64 --push -t schumann/signalwire-rest .
 ```
