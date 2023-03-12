@@ -13,6 +13,7 @@ const app = express();
 // Define constants
 const PORT = process.env.PORT || 3000;
 const XML_CONTENT_TYPE = 'text/xml';
+const SERVER_OK_STATUS = 200;
 const SERVER_ERROR_STATUS = 500;
 
 // Define initial route for the incoming call
@@ -76,6 +77,11 @@ app.get('/weather', async (req, res, next) => {
   // Send LaML response object as XML
   res.type(XML_CONTENT_TYPE);
   res.send(laml.toString());
+});
+
+// Define route for health check
+app.get('/health', (req, res) => {
+  res.status(SERVER_OK_STATUS).send('OK - healthy');
 });
 
 // Define error handling middleware

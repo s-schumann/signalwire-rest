@@ -52,7 +52,7 @@ EXPOSE 3000
 
 # Adding healthcheck to the container
 HEALTHCHECK --interval=30s --timeout=3s \
-  CMD wget -qO- http://localhost:3000/ || exit 1
+  CMD wget -qO- http://localhost:3000/health || exit 1
 
 # Add metadata about the image
 LABEL version="1.2.0"
