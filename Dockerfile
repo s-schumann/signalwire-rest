@@ -28,7 +28,7 @@ USER node
 COPY --chown=node:node . .
 
 # Run the app
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
 
 FROM base as production
 
@@ -40,6 +40,12 @@ ENV NODE_ENV production
 RUN --mount=type=cache,target=/usr/src/app/.npm \
   npm set cache /usr/src/app/.npm && \
   npm ci --only=production --omit=dev
+
+# Use non-elevated user
+USER node
+
+# Copy app source from dev stage
+COPY --chown=node:node --from=dev /usr/src/app .
 
 # Documenting the port where the app will be listening on
 EXPOSE 3000
