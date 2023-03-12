@@ -8,8 +8,8 @@ Module for showcasing the interaction with the Signalwire RESTful LaML API. It m
 To build the Docker image use the following commands (adapt with your respective tags):
 
 ```shell
-docker build --tag signalwire-rest .
-docker build -t schumann/signalwire-rest .
+docker build --target dev --target production --tag signalwire-rest .
+docker build --target production -t schumann/signalwire-rest .
 ```
 
 We can push or run/stop the container with the commands below.
