@@ -1,0 +1,16 @@
+{
+  "name": "signalwire-rest",
+  "version": "1.0.0",
+  "description": "Interact with Signalwire via the REST API (LaML)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Schumann",
+  "license": "MIT",
+  "dependencies": {
+    "@signalwire/compatibility-api": "^3.0.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
