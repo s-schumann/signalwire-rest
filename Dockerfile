@@ -51,7 +51,7 @@ COPY --chown=node:node --from=dev /usr/src/app .
 EXPOSE 3000
 
 # Adding healthcheck to the container
-HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \  
+HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \
   CMD node healthcheck.js
 
 # Add metadata about the image

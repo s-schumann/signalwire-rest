@@ -15,6 +15,7 @@ docker build --target production -t schumann/signalwire-rest .
 ```
 
 We can push or run/stop the container with the commands below.
+
 ```shell
 docker push schumann/signalwire-rest:latest
 docker run --env-file .env -p 30000:3000 signalwire-rest
