@@ -51,11 +51,11 @@ COPY --chown=node:node --from=dev /usr/src/app .
 EXPOSE 3000
 
 # Adding healthcheck to the container
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD wget -qO- http://localhost:3000/health || exit 1
+HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \  
+  CMD node healthcheck.js
 
 # Add metadata about the image
-LABEL version="1.2.2"
+LABEL version="1.2.4"
 LABEL description="Sample for a REST API that can be queried by a Signalwire inbound call and will create XML."
 LABEL maintainer="Sebastian Schumann <git@s-schumann.com>"
 

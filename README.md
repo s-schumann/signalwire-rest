@@ -3,6 +3,8 @@ Signalwire REST
 
 Module for showcasing the interaction with the Signalwire RESTful LaML API. It makes use of the SDK and uses Axios for making an HTTP request.
 
+The Dockerfile uses a health check to see if the process is serving the respective logic. The health check is a Node script since neither curl nor wget are part of the slim base image.
+
 # Using Docker 
 
 To build the Docker image use the following commands (adapt with your respective tags):

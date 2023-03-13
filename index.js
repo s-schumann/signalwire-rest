@@ -81,6 +81,7 @@ app.get('/weather', async (req, res, next) => {
 
 // Define route for health check
 app.get('/health', (req, res) => {
+  console.log('Health check reporting a healthy status.');
   res.status(SERVER_OK_STATUS).send('OK - healthy');
 });
 

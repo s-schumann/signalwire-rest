@@ -1,6 +1,6 @@
 {
   "name": "signalwire-rest",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Interact with Signalwire via the REST API (LaML)",
   "main": "index.js",
   "scripts": {
