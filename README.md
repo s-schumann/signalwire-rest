@@ -5,6 +5,8 @@ Module for showcasing the interaction with the Signalwire RESTful LaML API. It m
 
 The Dockerfile uses a health check to see if the process is serving the respective logic. The health check is a Node script since neither curl nor wget are part of the slim base image.
 
+This repository is supplemented by the same use case being implemented using the [Relay API](https://github.com/s-schumann/signalwire-relay).
+
 # Using Docker 
 
 To build the Docker image use the following commands (adapt with your respective tags):
